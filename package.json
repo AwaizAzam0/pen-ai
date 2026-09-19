@@ -1,0 +1,20 @@
+{
+  "name": "pen-ai-penpot-plugin",
+  "version": "1.0.0",
+  "description": "Pen AI — an AI design assistant plugin for Penpot",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:ui": "vite build",
+    "build:plugin": "esbuild src/plugin.ts --bundle --outfile=dist/plugin.js --format=iife --platform=browser --target=es2020",
+    "copy:assets": "mkdir -p dist && cp manifest.json dist/manifest.json && cp public/icon.svg dist/icon.svg",
+    "build": "npm run build:ui && npm run build:plugin && npm run copy:assets",
+    "serve": "npx serve dist -l 4400"
+  },
+  "devDependencies": {
+    "@penpot/plugin-types": "^1.0.0",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}
