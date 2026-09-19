@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pen AI</title>
+    <script type="module" crossorigin src="/assets/main-DSMrclke.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DrMfPsm_.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="pa-header">
+        <div class="pa-brand">
+          <span class="pa-spark">✨</span> Pen AI
+        </div>
+        <button id="pa-settings-btn" class="pa-icon-btn" title="Settings">⚙</button>
+      </header>
+
+      <section id="pa-settings" class="pa-settings hidden">
+        <label class="pa-label">Anthropic API key</label>
+        <input id="pa-api-key" type="password" placeholder="sk-ant-..." class="pa-input" />
+        <p class="pa-hint">
+          Stored locally in this Penpot file's plugin storage. Never sent anywhere
+          except directly to api.anthropic.com from your browser.
+        </p>
+        <button id="pa-save-key" class="pa-btn pa-btn-primary">Save key</button>
+      </section>
+
+      <section id="pa-empty" class="pa-empty">
+        <p>Select a shape, image or SVG on the canvas.</p>
+        <p class="pa-hint">Pen AI will appear here so you can ask it to restyle it.</p>
+      </section>
+
+      <section id="pa-selected" class="pa-selected hidden">
+        <div class="pa-selected-row">
+          <div class="pa-selected-info">
+            <span id="pa-selected-count" class="pa-badge">0</span>
+            <span id="pa-selected-name" class="pa-selected-name">—</span>
+          </div>
+          <button id="pa-trigger" class="pa-trigger">
+            <span class="pa-spark">✨</span> Ask Pen AI
+          </button>
+        </div>
+      </section>
+
+      <section id="pa-prompt" class="pa-prompt hidden">
+        <textarea
+          id="pa-prompt-input"
+          class="pa-textarea"
+          rows="3"
+          placeholder="e.g. 'make this a sunset orange-to-pink gradient' or 'recolor to our brand purple #7C5CFF' or 'turn this into a simple line-art cloud icon'"
+        ></textarea>
+        <div class="pa-prompt-actions">
+          <button id="pa-cancel" class="pa-btn">Cancel</button>
+          <button id="pa-generate" class="pa-btn pa-btn-primary">Generate</button>
+        </div>
+        <p id="pa-status" class="pa-hint"></p>
+      </section>
+
+      <section id="pa-result" class="pa-result hidden">
+        <p id="pa-result-note" class="pa-result-note"></p>
+        <button id="pa-again" class="pa-btn">Ask again</button>
+      </section>
+    </div>
+  </body>
+</html>
