@@ -1,0 +1,12 @@
+{
+  "name": "Pen AI",
+  "description": "AI design assistant for Penpot. Select any shape, image or SVG, describe the change you want, and Pen AI recolors it, applies a gradient, or generates a replacement SVG.",
+  "code": "/plugin.js",
+  "icon": "/icon.svg",
+  "permissions": [
+    "content:read",
+    "content:write",
+    "library:read",
+    "user:read"
+  ]
+}
